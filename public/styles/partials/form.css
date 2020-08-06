@@ -49,6 +49,12 @@
     bottom: 0;
 }
 
+label small {
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    color: var(--color-small-info);
+}
+
 @media (min-width: 700px) {
     .select-block:focus-within::after,
     .input-block:focus-within::after,
