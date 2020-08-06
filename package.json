@@ -14,5 +14,8 @@
     "hooks": {
       "commit-msg": "yarn commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "dependencies": {
+    "dot-prop": "^5.2.0"
   }
 }
