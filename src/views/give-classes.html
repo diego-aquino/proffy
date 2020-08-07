@@ -68,17 +68,13 @@
                         <label for="subject">Matéria</label>
 
                         <select name="subject" id="subject" required>
-                            <option value="">Selecione o que você quer ensinar</option>
-                            <option value="1">Artes</option>
-                            <option value="2">Biologia</option>
-                            <option value="3">Ciências</option>
-                            <option value="4">Educação física</option>
-                            <option value="5">Física</option>
-                            <option value="6">Geografia</option>
-                            <option value="7">História</option>
-                            <option value="8">Matemática</option>
-                            <option value="9">Português</option>
-                            <option value="10">Química</option>
+                            <option value="0">Selecione o que você quer ensinar</option>
+
+                            {% for subject in subjects %}
+                                <option value="{{loop.index}}">
+                                    {{subject}}
+                                </option>
+                            {% endfor %}
                         </select>
                     </div>
 
@@ -99,25 +95,24 @@
                             <label for="weekday">Dia da semana</label>
                             <!-- "weekday[]": query of multiple values of this type -->
                             <select name="weekday[]" required>
-                                <option value="">Selecione o dia</option>
-                                <option value="1">Domingo</option>
-                                <option value="2">Segunda-feira</option>
-                                <option value="3">Terça-feira</option>
-                                <option value="4">Quarta-feira</option>
-                                <option value="5">Quinta-feira</option>
-                                <option value="6">Sexta-feira</option>
-                                <option value="7">Sábado</option>
+                                <option value="0">Selecione o dia</option>
+
+                                {% for weekday in weekdays %}
+                                    <option value="{{loop.index}}">
+                                        {{weekday}}
+                                    </option>
+                                {% endfor %}
                             </select>
                         </div>
 
                         <div class="input-block">
                             <label for="time-from">De</label>
-                            <input name="type-from[]" type="time" required>
+                            <input name="timeFrom[]" type="time" required>
                         </div>
 
                         <div class="input-block">
                             <label for="time-to">Até</label>
-                            <input name="type-to[]" type="time" required>
+                            <input name="timeTo[]" type="time" required>
                         </div>
                     </div>
                 </fieldset>
