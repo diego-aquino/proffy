@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "dot-prop": "^5.2.0",
-    "nunjucks": "^3.2.2"
+    "nunjucks": "^3.2.2",
+    "sqlite-async": "^1.1.0"
   }
 }
