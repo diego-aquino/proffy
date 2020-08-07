@@ -50,6 +50,10 @@ export function pageGiveClasses(req, res) {
     return res.render('give-classes.html', { subjects, weekdays });
 }
 
+export function pageRegisterSuccess(req, res) {
+    return res.render('register-success.html');
+}
+
 export async function proceedRegistration(req, res) {
     const {
         name, avatar, whatsapp, bio, subject,
@@ -70,9 +74,7 @@ export async function proceedRegistration(req, res) {
         const database = await db;
         await createProffy(database, { proffyData, classData, classSchedules});
 
-        const pageQuery = `?subject=${subject}&weekday=${weekdays[0]}&time=${timeFrom[0]}`;
-
-        return res.redirect(`/study${pageQuery}`);
+        return res.redirect(`/register-success`);
     } catch (error) {
         console.error(error);
     }

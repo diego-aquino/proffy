@@ -1,0 +1,55 @@
+#page-register-success {
+    background-color: var(--color-primary);
+    background-image: url('/public/assets/success-background.svg');
+}
+
+#page-register-success #container {
+    padding: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+.success-check {
+    height: 12rem;
+    margin-bottom: 2rem;
+}
+
+.success-title {
+    margin-bottom: 1.2rem;
+
+    font-size: 5rem;
+    text-align: center;
+    color: var(--color-title-in-primary);
+}
+
+.success-message {
+    margin-bottom: 8rem;
+
+    font-size: 1.4rem;
+    text-align: center;
+    color: var(--color-text-in-primary);
+}
+
+@media (max-width: 560px) {
+    :root {
+        font-size: 50%;
+    }
+
+    .success-message {
+        font-size: 2rem;
+    }
+}
+
+@media (max-height: 485px) {
+    #page-register-success #container {
+        padding-bottom: 3.5rem;
+    }
+
+    .success-check {
+        height: 9rem;
+    }
+}
