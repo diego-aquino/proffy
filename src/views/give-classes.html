@@ -92,9 +92,9 @@
 
                     <div class="schedule-item">
                         <div class="select-block">
-                            <label for="weekday">Dia da semana</label>
-                            <!-- "weekday[]": query of multiple values of this type -->
-                            <select name="weekday[]" required>
+                            <label for="weekdays">Dia da semana</label>
+                            <!-- "weekdays[]": query of multiple values of this type -->
+                            <select id="weekdays" name="weekdays[]" required>
                                 <option value="0">Selecione o dia</option>
 
                                 {% for weekday in weekdays %}
