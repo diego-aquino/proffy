@@ -5,6 +5,7 @@ import {
     pageLanding,
     pageStudy,
     pageGiveClasses,
+    pageRegisterSuccess,
     proceedRegistration
 } from './pages';
 
@@ -23,6 +24,8 @@ nunjucks.configure('src/views', {
 server.get('/', pageLanding);
 server.get('/study', pageStudy);
 server.get('/give-classes', pageGiveClasses);
+server.get('/register-success', pageRegisterSuccess);
+
 server.post('/proceed-registration', proceedRegistration);
 
 server.listen(5500);
