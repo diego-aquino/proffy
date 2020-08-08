@@ -30,8 +30,9 @@
 
 ## :rocket: Features
 
-- Register waste collection institutions, with support to name, image, address and type of items colleted.
-- Search for waste collection sites by city.
+- Visual feedback and pleasant UI
+- Proffy (teacher) registration, supporting class subject, available schedules and personal data, such as name, profile avatar and bio
+- Search for registered teachers, filtered by subject, weekday and time
 
 ## :gear: Technologies
 
