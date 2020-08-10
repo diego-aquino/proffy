@@ -1,12 +1,10 @@
-const addScheduleButton = document.querySelector('button#add-schedule');
-
-addScheduleButton.addEventListener('click', addNewSchedule);
-
-function addNewSchedule() {
+export default function addNewSchedule() {
     const newSchedule = getNewEmptySchedule();
 
     const scheduleFieldset = document.querySelector('#schedule-items');
     scheduleFieldset.appendChild(newSchedule);
+
+    return newSchedule;
 }
 
 function getNewEmptySchedule() {

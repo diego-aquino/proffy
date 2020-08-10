@@ -14,7 +14,10 @@
     <link rel="stylesheet" href="/public/styles/partials/form.css">
     <link rel="stylesheet" href="/public/styles/partials/page-give-classes.css">
 
-    <script src="/public/scripts/addSchedule.js" defer></script>
+    <script
+        src="/public/scripts/schedule/scheduleManager.js"
+        type="module" defer
+    ></script>
 </head>
 
 <body id="page-give-classes">
@@ -91,6 +94,10 @@
                     </legend>
 
                     <div class="schedule-item">
+                        <button type="button" class="remove-schedule inactive">
+                            <img src="/public/assets/icons/x-mark.svg" alt="Remover horário">
+                        </button>
+
                         <div class="select-block">
                             <label for="weekdays">Dia da semana</label>
                             <!-- "weekdays[]": query of multiple values of this type -->
@@ -105,12 +112,12 @@
                             </select>
                         </div>
 
-                        <div class="input-block">
+                        <div class="input-block time-from">
                             <label for="time-from">De</label>
                             <input name="timeFrom[]" type="time" required>
                         </div>
 
-                        <div class="input-block">
+                        <div class="input-block time-to">
                             <label for="time-to">Até</label>
                             <input name="timeTo[]" type="time" required>
                         </div>
